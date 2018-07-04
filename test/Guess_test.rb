@@ -1,4 +1,3 @@
-##this is very much a work in progress
 require 'minitest/autorun'
 require 'minitest/pride'
 require_relative '../lib/Guess'
@@ -62,11 +61,6 @@ class GuessTest < Minitest::Test
     guess = Guess.new("2 of diamonds", card)
     #binding.pry
     assert_equal "Incorrect", guess.feedback
-  end
-
-  def test_card_1_exists
-    card_1 = Card.new("3","Hearts")
-    assert_instance_of Card, card
   end
 
 end
