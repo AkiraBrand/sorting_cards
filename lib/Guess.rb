@@ -11,25 +11,29 @@ class Guess
     #you can have more instance variables than you have arguement
   end
 
-  def correct?
-   @response == "#{@card.value} of #{@card.suit}"
-  end
+  # def correct?
+  #  @response == "#{@card.value} of #{@card.suit}"
+  # end
 
-  #this is another way to do it that I wrote and don't want to lose
-  #def correct?
-   #if @response == "#{@card.value} of #{@card.suit}"
-     #true
-   #else
-     #false
-   #end
-  #end
+  # this is another way to do it that I wrote and don't want to lose
+  def correct?
+   if @response == "#{@card.value} of #{@card.suit}"
+     true
+   else
+     false
+   end
+  end
 
   def feedback
     if self.correct? == true
+    # if correct?(@response) == true
      "Correct!"
    else
      "Incorrect"
    end
+
+
+
  end
 
 
