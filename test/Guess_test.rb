@@ -6,7 +6,6 @@ require_relative '../lib/Card'
 require 'pry'
 
 class GuessTest < Minitest::Test
-    #attr_acce card
   def test_card_object_exists
     card = Card.new("Ace", "Spades")
     assert_instance_of Card, card
@@ -61,9 +60,13 @@ class GuessTest < Minitest::Test
   def test_the_response_is_incorrect
     card = Card.new("Queen", "Clubs")
     guess = Guess.new("2 of diamonds", card)
-    binding.pry
+    #binding.pry
     assert_equal "Incorrect", guess.feedback
   end
 
+  def test_card_1_exists
+    card_1 = Card.new("3","Hearts")
+    assert_instance_of Card, card
+  end
 
 end
