@@ -11,32 +11,19 @@ class CardTest < Minitest::Test
     assert_instance_of Card, card
   end
 
-  def test_something
-    skip
-    card = Card.new("10", "Hearts")
-    guess = Guess.new("10 of Hearts", card)
-    p guess.card
+  def test_card_1_exists
+    card_1 = Card.new("3","Hearts")
+    assert_instance_of Card, card_1
   end
 
-  def test_card_value
-    skip
-    card_2 = Card.new("10", "hearts")
-    assert_equal "10", card_2.value
-    binding.pry
+  def test_card_2_exists
+    card_2 = Card.new("4", "Clubs")
+    assert_instance_of Card, card_2
   end
 
-  def test_card_suit
-    skip
-    card_3 = Card.new("10", "spades")
-    assert_equal "spades", card_3.suit
-    binding.pry
-  end
-
-  def test_is_guess_correct?
-    skip
-   card_4 = Card.new("10", "spades")
-   guess_1 = Guess.new("10 of spades", card_4)
-   assert_equal guess_1, card_4
+  def test_card_3_exists
+    card_3 = Card.new("5", "Diamonds")
+    assert_instance_of Card, card_3
   end
 
 end
