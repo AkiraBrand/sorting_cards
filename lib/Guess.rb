@@ -7,7 +7,6 @@ class Guess
   def initialize (response, card)
     @response = response
     @card = card
-    #make a method HERE to smash the card arguments together
     #you can have more instance variables than you have arguement
   end
 
@@ -15,7 +14,6 @@ class Guess
   #  @response == "#{@card.value} of #{@card.suit}"
   # end
 
-  # this is another way to do it that I wrote and don't want to lose
   def correct?
    if @response == "#{@card.value} of #{@card.suit}"
      true
@@ -26,15 +24,11 @@ class Guess
 
   def feedback
     if self.correct? == true
-    # if correct?(@response) == true
      "Correct!"
    else
      "Incorrect"
    end
-
-
-
- end
+  end
 
 
 
