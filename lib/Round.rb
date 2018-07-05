@@ -16,9 +16,6 @@ class Round
    @guesses = []
    @card_number = 0
    @number_correct = 0
-   #i think i should not do this in the initialize but in another method that calls for
-   #an argument. we will see.
-   #@guesses = []
  end
 
   def current_card
@@ -45,5 +42,8 @@ class Round
    percentage = number_correct/final_count * 100
   end
 
+ def sort
+   
+ end
 
 end
